@@ -13,7 +13,7 @@
         })
     })
 
-    //------------------------------------------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------------------------------------------------
 
 
     document.addEventListener('DOMContentLoaded', function () {
@@ -21,7 +21,7 @@
     
         frontViews.forEach(function (frontView) {
             frontView.addEventListener('click', function () {
-                let backView = frontView.nextElementSibling; // Assuming it's the next sibling
+                let backView = frontView.nextElementSibling;
                 if (backView) {
                     backView.style.display = (backView.style.display === 'none' || backView.style.display === '') ? 'block' : 'none';
                 }
@@ -29,6 +29,8 @@
         });
     });
 
+//------------------------------------------------------------------------------------------------------------------------
 
 
-    
+
+    // Vill lägga en eventlistener på en class som alla cards är med i som räknar klicken
