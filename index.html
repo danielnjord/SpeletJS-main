@@ -7,7 +7,7 @@
     <title>Document</title>
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="nice-select2/dist/css/nice-select2.css">
 
 
 </head>
@@ -157,14 +157,16 @@
 
                   <div class="details">
                     <div id="dropDown">
-                      <select class="dropDown-selector">
+                      <select id="dropDown-selector">
                           <option value="15s">15s</option>
                           <option value="30s">30s</option>
                           <option value="60s">60s</option>
                       </select>
-                  </div>
+                    </div>
 
-                    <p class="flips">Antal: <span><b>0</b></span>></p>
+                    <p class="flips">Antal: <div id = "antalKlick">0</div></p>
+                    
+
                     <button>Starta om</button>
                   </div>
                 </ul>
@@ -173,9 +175,10 @@
         </section>
 
     </main>
+    <script src="nice-select2/dist/js/nice-select2.js"></script>
+    <script src="script.js"></script> 
     <footer>
         (C) Stefan
     </footer>
-    <script src="script.js"></script> 
 </body>
 </html>
