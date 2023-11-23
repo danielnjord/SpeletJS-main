@@ -1,11 +1,12 @@
 
-NiceSelect.bind(document.getElementById("dropDown"))
+NiceSelect.bind(document.getElementById("dropDown")) 
 
+// väljer alla element med klassen 'view-front-view'
+let frontView = document.querySelectorAll('.view-front-view')
 
 document.addEventListener('DOMContentLoaded', function () {
-    let frontViews = document.querySelectorAll('.view-front-view')
-    
-    frontViews.forEach(function (frontView) {
+    // lägger till eventlistener till varje element 'frontView' / view-front-view i html
+    frontView.forEach(function (frontView) {
         frontView.addEventListener('click', function () {
             let backView = frontView.nextElementSibling
             if (backView) {
@@ -16,16 +17,15 @@ document.addEventListener('DOMContentLoaded', function () {
     })
 })
 
-//------------------------------------------------------------------------------------------------------------------------
-
+// väljer alla element med klassen 'card'
 let cardClick = document.querySelectorAll('.card')
 let clickCount = 0
 
-// en loop som går igenom alla element som är med i klassen 'card' och lägger till en eventlistener på dem
+// en loop som går igenom alla element som är med i klassen 'card' och lägger till en eventlistener på dem som 
+// räknar klick och uppdaterar textencontent på variabeln 'antalKlick'
 cardClick.forEach(function (card) {
     card.addEventListener('click', function () {
         clickCount++;
-        // uppdaterar textContent på elementet 'flips'
         document.getElementById('antalKlick').textContent = clickCount;
     });
 });
